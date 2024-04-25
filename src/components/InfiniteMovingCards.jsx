@@ -3,13 +3,17 @@ import { InfiniteMovingCards } from "../utils/InfiniteMovingCards/infinite-movin
 
 export default function InfiniteMovingCardsDemo() {
   return (
-    <div className="h-[40rem] flex flex-col antialiased dark:bg-grid-white/[0.05] overflow-hidden">
+    <div className="h-[40rem] flex flex-col antialiased dark:bg-grid-white/[0.05] w-full">
       <InfiniteMovingCards
         items={testimonials}
         direction="right"
-        speed="slow"
+        speed="normal"
       />
-      <InfiniteMovingCards items={testimonials} direction="left" speed="slow" />
+      <InfiniteMovingCards
+        items={testimonials}
+        direction="left"
+        speed="normal"
+      />
     </div>
   );
 }
