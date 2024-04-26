@@ -2,17 +2,30 @@ import React, { useEffect, useState } from "react";
 import { InfiniteMovingCards } from "../utils/InfiniteMovingCards/infinite-moving-card";
 
 export default function InfiniteMovingCardsDemo() {
+  const [position, setPosition] = useState(0);
+
+  const updatePosition = () => {
+    setPosition((prevPosition) => prevPosition + 1);
+  };
+
+  useEffect(() => {
+    const intervalId = setInterval(updatePosition, 5000);
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
-    <div className="h-[40rem] flex flex-col antialiased dark:bg-grid-white/[0.05] w-full">
+    <div className="flex flex-col antialiased dark:bg-grid-white/[0.05] w-full">
       <InfiniteMovingCards
         items={testimonials}
         direction="right"
         speed="normal"
+        position={position}
       />
       <InfiniteMovingCards
         items={testimonials}
         direction="left"
         speed="normal"
+        position={position}
       />
     </div>
   );
