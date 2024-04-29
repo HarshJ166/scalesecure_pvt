@@ -127,18 +127,18 @@ export default function Home() {
       {/* InfiniteMovingCard */}
       <div>
         <div className="items-center justify-center flex flex-col">
-          <h2 className="font-body text-4xl leading-10 m-3 text-[#ABABAB]">
+          <h2 className="font-body text-4xl w-full text-left p-5 sm:m-3 text-[#ABABAB] sm:text-center sm:w-2/3">
             Some proof we really know what we’re doing
           </h2>
           <InfiniteMovingCardsDemo />
-          <button className="px-8 justify-center items-center box-border bg-black text-white text-sm rounded-md font-body hover:bg-black/[0.8] hover:shadow-lg p-5 mt-6">
+          <button className="px-8 justify-center items-center box-border bg-black text-white text-sm rounded-md font-body hover:bg-black/[0.8] hover:shadow-lg p-3">
             See all case Studies
           </button>
         </div>
       </div>
       {/* InfiniteMovingCard */}
       <div>Get Smartrr</div>
-      <div className="mx-5 mt-5">
+      <div className="p-5">
         <Footer />
       </div>
     </div>
