@@ -2,9 +2,13 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import ContinuousScroll from "../components/ContinuousScroll";
-import InfiniteMovingCardsDemo from "../components/InfiniteMovingCards";
+import Carousel from "../components/Carousel";
+import CarouselPhone from "../components/CarouselPhone";
 import MovingCardPhone from "../components/MovingCardPhone";
 import MovingCard from "../components/MovingCard";
+import InfiniteMovingCardsDemo from "../components/InfiniteMovingCards";
+import Shopify from "../components/Shopify";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -18,22 +22,58 @@ export default function Home() {
   }, []);
   return (
     <div className="bg-[#D8E7F0] font-body">
+      {/* Navbar */}
       <div>
         <Navbar />
       </div>
-      <div className="px-5">
-        <HeroSection />
+      {/* Navbar */}
+
+      {/* HeroSection */}
+      <div className="flex justify-center items-center bg-[#03193D] rounded-3xl p-5 m-5">
+        <div>
+          <HeroSection />
+        </div>
       </div>
+      {/* HeroSection */}
+
+      {/* Continuous Scroll */}
       <div className="p-5 m-5 bg-[#c3d3e1] rounded-3xl">
         <ContinuousScroll />
       </div>
+      {/* Continuous Scroll */}
 
       <div>BentoGrid</div>
-      <div>Carousel</div>
+
+      {/* Carousel */}
+      <div
+        className={
+          width <= 768
+            ? "w-full h-full flex justify-center items-center p-5"
+            : "hidden"
+        }
+      >
+        <div className="w-full h-full flex justify-center items-center">
+          <CarouselPhone />
+        </div>
+      </div>
+
+      <div
+        className={
+          width > 768
+            ? "w-full h-full flex justify-center items-center p-5"
+            : "hidden"
+        }
+      >
+        <div className="w-full h-full flex justify-center items-center">
+          <Carousel />
+        </div>
+      </div>
+      {/* Carousel */}
+
       <div>Subscribers Card Stack</div>
       <div>Grid</div>
-
-      {/* Moving-Card */}
+      {/* Moving-Card Section*/}
+      {/* Phone Element */}
       <div
         className={
           width <= 768
@@ -42,7 +82,7 @@ export default function Home() {
         }
       >
         <div className="w-[99%] h-[95%] flex justify-center items-center bg-white rounded-3xl p-5">
-          <div className="w-3/4 flex flex-col items-center justify-center m-4">
+          <div className="w-3/4 flex flex-col items-center justify-center m-5">
             <div className="font-body text-lg flex my-5 font-bold items-center justify-start">
               Worried about migration? We’ve got you covered.
             </div>
@@ -55,7 +95,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+      {/* laptop Element */}
       <div
         className={
           width > 768
@@ -77,9 +117,13 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Moving Card  */}
 
-      <div>Shopify</div>
-
+      <div className="m-5">
+        <div>
+          <Shopify />
+        </div>
+      </div>
       {/* InfiniteMovingCard */}
       <div>
         <div className="items-center justify-center flex flex-col">
@@ -92,8 +136,11 @@ export default function Home() {
           </button>
         </div>
       </div>
+      {/* InfiniteMovingCard */}
       <div>Get Smartrr</div>
-      <div>Footer</div>
+      <div className="mx-5 mt-5">
+        <Footer />
+      </div>
     </div>
   );
 }

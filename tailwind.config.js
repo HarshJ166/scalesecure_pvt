@@ -18,6 +18,7 @@ export const theme = {
 
     fontFamily: {
       body: ["SharpGrotesk", "sans-serif"],
+      para: ["Messina", "sans-serif"],
     },
   },
   animation: {

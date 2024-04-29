@@ -1,11 +1,12 @@
 import React from "react";
 import ThreeDCard from "./ThreeDCard";
 import StarIcon from "@mui/icons-material/Star";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
-    <div className="min-h-screen flex justify-center font-body">
-      <div className="bg-[#03193D] rounded-3xl lg:max-w-7xl lg:mx-auto p-3 flex flex-col lg:flex-row text-[#ABABAB]">
+    <div className="min-h-screen flex justify-center items-center">
+      <div className="bg-[#03193D] rounded-3xl lg:max-w-7xl lg:mx-auto p-3 flex flex-col lg:flex-row text-[#ABABAB] justify-center items-center">
         {/* left-container */}
         <div className="lg:w-1/2 lg:place-content-center p-4 lg:p-12">
           <div className="flex flex-row items-center mb-4">
@@ -29,8 +30,8 @@ export default function HeroSection() {
             with subscriptions tailored to how you sell and your customers
             buy–all without the difficult development work.
           </div>
-          <button className="px-6 lg:px-8 py-3 text-black text-sm rounded-md font-semibold bg-[#E0F445] hover:bg-black/[0.8] hover:shadow-lg">
-            Get a Demo
+          <button className="px-6 lg:px-8 py-3 text-black text-sm rounded-md font-semibold bg-[#E0F445] ">
+            <Link to="/Register">Get a Demo</Link>
           </button>
         </div>
 
