@@ -9,7 +9,7 @@ import TailwindCSS from "../assets/images/TailwindCSS.png";
 export default function ContinuousScroll() {
   return (
     <div className="logoScroll">
-      <div className="bg-[#d4e6e90f] overflow-hidden h-40 flex rounded-3xl">
+      <div className="bg-[#d4e6e90f] overflow-hidden h-30 flex rounded-3xl">
         <div className="flex pl-6 pt-4 pb-2 justify-items-center space-x-16 animate-loop-scroll">
           <img
             loading="lazy"

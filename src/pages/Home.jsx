@@ -9,6 +9,7 @@ import MovingCard from "../components/MovingCard";
 import InfiniteMovingCardsDemo from "../components/InfiniteMovingCards";
 import Shopify from "../components/Shopify";
 import Footer from "../components/Footer";
+import Banner from "../components/Banner";
 
 export default function Home() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -27,28 +28,24 @@ export default function Home() {
         <Navbar />
       </div>
       {/* Navbar */}
-
       {/* HeroSection */}
-      <div className="flex justify-center items-center bg-[#03193D] rounded-3xl p-5 m-5">
-        <div>
-          <HeroSection />
-        </div>
+      <div className="flex justify-center items-center bg-[#03193D] rounded-3xl sm:h-[784px] h-full m-2 sm:m-5">
+        <HeroSection />
       </div>
       {/* HeroSection */}
-
       {/* Continuous Scroll */}
-      <div className="p-5 m-5 bg-[#c3d3e1] rounded-3xl">
+      <div className="px-5 py-2.5 m-5 bg-[#c3d3e1] rounded-3xl">
         <ContinuousScroll />
       </div>
       {/* Continuous Scroll */}
-
       <div>BentoGrid</div>
 
       {/* Carousel */}
+      {/* Phone */}
       <div
         className={
           width <= 768
-            ? "w-full h-full flex justify-center items-center p-5"
+            ? "w-full h-full flex justify-center items-center px-5 py-2.5"
             : "hidden"
         }
       >
@@ -56,11 +53,11 @@ export default function Home() {
           <CarouselPhone />
         </div>
       </div>
-
+      {/* Laptop */}
       <div
         className={
           width > 768
-            ? "w-full h-full flex justify-center items-center p-5"
+            ? "w-full h-full flex justify-center items-center px-5 py-2.5"
             : "hidden"
         }
       >
@@ -77,7 +74,7 @@ export default function Home() {
       <div
         className={
           width <= 768
-            ? "w-full h-full flex justify-center items-center p-5"
+            ? "w-full h-full flex justify-center items-center px-5 py-2.5"
             : "hidden"
         }
       >
@@ -99,7 +96,7 @@ export default function Home() {
       <div
         className={
           width > 768
-            ? "w-full h-full flex justify-center items-center p-5"
+            ? "w-full h-full flex justify-center items-center px-5 py-2.5"
             : "hidden"
         }
       >
@@ -118,8 +115,7 @@ export default function Home() {
         </div>
       </div>
       {/* Moving Card  */}
-
-      <div className="m-5">
+      <div className="px-5 py-2.5">
         <div>
           <Shopify />
         </div>
@@ -127,7 +123,7 @@ export default function Home() {
       {/* InfiniteMovingCard */}
       <div>
         <div className="items-center justify-center flex flex-col">
-          <h2 className="font-body text-4xl w-full text-left p-5 sm:m-3 text-[#ABABAB] sm:text-center sm:w-2/3">
+          <h2 className="font-body text-4xl w-full text-left px-5 py-2.5 sm:m-3 text-[#ABABAB] sm:text-center sm:w-2/3">
             Some proof we really know what we’re doing
           </h2>
           <InfiniteMovingCardsDemo />
@@ -137,8 +133,10 @@ export default function Home() {
         </div>
       </div>
       {/* InfiniteMovingCard */}
-      <div>Get Smartrr</div>
-      <div className="p-5">
+      <div className="px-5 py-2.5">
+        <Banner />
+      </div>
+      <div className="px-5 py-2.5">
         <Footer />
       </div>
     </div>
