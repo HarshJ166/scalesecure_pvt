@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import ContinuousScroll from "../components/ContinuousScroll";
+import BentoGridPhone from "../components/BentoGridPhone";
+import BentoGrid from "../components/BentoGrid";
 import Carousel from "../components/Carousel";
 import CarouselPhone from "../components/CarouselPhone";
 import MovingCardPhone from "../components/MovingCardPhone";
@@ -9,7 +11,6 @@ import MovingCard from "../components/MovingCard";
 import InfiniteMovingCardsDemo from "../components/InfiniteMovingCards";
 import Shopify from "../components/Shopify";
 import Footer from "../components/Footer";
-import Banner from "../components/Banner";
 
 export default function Home() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -24,21 +25,45 @@ export default function Home() {
   return (
     <div className="bg-[#D8E7F0] font-body">
       {/* Navbar */}
-      <div>
+      <div className="px-5">
         <Navbar />
       </div>
       {/* Navbar */}
+
       {/* HeroSection */}
       <div className="flex justify-center items-center bg-[#03193D] rounded-3xl sm:h-[784px] h-full m-2 sm:m-5">
         <HeroSection />
       </div>
       {/* HeroSection */}
+
       {/* Continuous Scroll */}
       <div className="px-5 py-2.5 m-5 bg-[#c3d3e1] rounded-3xl">
         <ContinuousScroll />
       </div>
       {/* Continuous Scroll */}
-      <div>BentoGrid</div>
+
+      {/* BentoGrid */}
+      {/* Phone Element */}
+      <div
+        className={
+          width <= 768
+            ? "w-full h-full flex justify-center items-center px-5 py-2.5"
+            : "hidden"
+        }
+      >
+        <BentoGridPhone />
+      </div>
+      {/* Desktop Element */}
+      <div
+        className={
+          width > 768
+            ? "w-full h-full flex justify-center items-center px-5 py-2.5"
+            : "hidden"
+        }
+      >
+        <BentoGrid />
+      </div>
+      {/* BentoGrid */}
 
       {/* Carousel */}
       {/* Phone */}
@@ -69,7 +94,8 @@ export default function Home() {
 
       <div>Subscribers Card Stack</div>
       <div>Grid</div>
-      {/* Moving-Card Section*/}
+
+      {/* Moving-Card*/}
       {/* Phone Element */}
       <div
         className={
@@ -133,9 +159,6 @@ export default function Home() {
         </div>
       </div>
       {/* InfiniteMovingCard */}
-      <div className="px-5 py-2.5">
-        <Banner />
-      </div>
       <div className="px-5 py-2.5">
         <Footer />
       </div>
