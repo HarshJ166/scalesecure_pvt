@@ -10,7 +10,7 @@ const Bento = () => {
   const [gridSixHovered, setgridSixHovered] = useState(false);
 
   return (
-    <div className="flex flex-col bg-white rounded-2xl justify-center items-center ">
+    <div className="flex flex-col bg-white rounded-2xl justify-center items-center w-full h-full">
       {/* Written Section  */}
       <div className="flex flex-row w-7/12 justify-center items-center pt-5 space-x-5">
         <div className="w-1/2 ">
@@ -29,7 +29,7 @@ const Bento = () => {
           </button>
         </div>
       </div>
-      <div className="h-7/12 w-7/12 grid grid-cols-3 gap-5 py-8">
+      <div className="h-7/12 w-[1000px] grid grid-cols-3 gap-5 py-8">
         {/* Box-1 */}
         <div
           className="  row-span-1 bg-indigo-200 rounded-3xl transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300 "

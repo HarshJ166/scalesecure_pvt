@@ -11,6 +11,8 @@ import MovingCard from "../components/MovingCard";
 import InfiniteMovingCardsDemo from "../components/InfiniteMovingCards";
 import Shopify from "../components/Shopify";
 import Footer from "../components/Footer";
+import WhyScale from "../components/WhyScale";
+import WhyScalePhone from "../components/WhyScalePhone";
 
 export default function Home() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -25,23 +27,22 @@ export default function Home() {
   return (
     <div className="bg-[#D8E7F0] font-body">
       {/* Navbar */}
-      <div className="px-5">
+      <div className="mx-5 z-20 bg-[#D8E7F0] ">
         <Navbar />
       </div>
       {/* Navbar */}
-
       {/* HeroSection */}
-      <div className="flex justify-center items-center bg-[#03193D] rounded-3xl sm:h-[784px] h-full m-2 sm:m-5">
-        <HeroSection />
+      <div className="pt-24 bg-[#D8E7F0] md:pt-0">
+        <div className="flex justify-center items-center bg-[#03193D] rounded-3xl sm:h-[784px] h-full mx-2 mb-2 sm:mx-5 sm:mb-5 md:mt-0 ">
+          <HeroSection />
+        </div>
       </div>
       {/* HeroSection */}
-
       {/* Continuous Scroll */}
       <div className="px-5 py-2.5 m-5 bg-[#c3d3e1] rounded-3xl">
         <ContinuousScroll />
       </div>
       {/* Continuous Scroll */}
-
       {/* BentoGrid */}
       {/* Phone Element */}
       <div
@@ -64,9 +65,8 @@ export default function Home() {
         <BentoGrid />
       </div>
       {/* BentoGrid */}
-
       {/* Carousel */}
-      {/* Phone */}
+      {/* Phone Element */}
       <div
         className={
           width <= 768
@@ -78,7 +78,7 @@ export default function Home() {
           <CarouselPhone />
         </div>
       </div>
-      {/* Laptop */}
+      {/* Desktop Element */}
       <div
         className={
           width > 768
@@ -91,10 +91,29 @@ export default function Home() {
         </div>
       </div>
       {/* Carousel */}
-
       <div>Subscribers Card Stack</div>
-      <div>Grid</div>
-
+      {/* Card Section */}
+      {/* Phone Element */}
+      <div
+        className={
+          width <= 768
+            ? "w-full h-full flex justify-center items-center px-5 py-2.5"
+            : "hidden"
+        }
+      >
+        <WhyScalePhone />
+      </div>
+      {/* Desktop Element */}
+      <div
+        className={
+          width > 768
+            ? "w-full h-full flex justify-center items-center px-5 py-2.5"
+            : "hidden"
+        }
+      >
+        <WhyScale />
+      </div>
+      {/* Card Section */}
       {/* Moving-Card*/}
       {/* Phone Element */}
       <div
@@ -159,6 +178,7 @@ export default function Home() {
         </div>
       </div>
       {/* InfiniteMovingCard */}
+      {/* Footer */}
       <div className="px-5 py-2.5">
         <Footer />
       </div>
