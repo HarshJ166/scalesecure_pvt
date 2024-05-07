@@ -125,6 +125,12 @@ const dropdownNavs = [
   },
 ];
 
+const resourceDropdown = [
+  { label: "Blog" },
+  { label: "Integration" },
+  { label: "Partner" },
+];
+
 export default () => {
   const [state, setState] = useState(false);
   const [dropdownState, setdropdownState] = useState({
@@ -137,18 +143,23 @@ export default () => {
   const navigation = [
     {
       title: "Platform",
-      path: "javascript:void(0)",
+      path: "/",
       isDropdown: true,
       navs: dropdownNavs,
     },
     {
       title: "Why ScaleSecure",
-      path: "javascript:void(0)",
+      path: "/",
       isDropdown: true,
       navs: dropdownNavs,
     },
-    { title: "Pricing", path: "javascript:void(0)", isDropdown: false },
-    { title: "Resources", path: "javascript:void(0)", isDropdown: false },
+    { title: "Pricing", path: "/Pricing", isDropdown: false },
+    {
+      title: "Resources",
+      path: "/",
+      isDropdown: true,
+      navs: resourceDropdown,
+    },
   ];
 
   useEffect(() => {
@@ -211,8 +222,8 @@ export default () => {
               state ? "block" : "hidden"
             }`}
           >
-            <ul className="items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
-              <div className="md:items-center space-y-6 md:flex flex-col md:flex-row md:space-x-4 md:space-y-0 flex md:mt-4">
+            <ul className="items-center space-y-6 md:flex md:space-x-6 md:space-y-0 ">
+              <div className="md:items-center space-y-6 md:flex flex-col md:flex-row md:space-x-4 md:space-y-0 flex md:mt-4 ">
                 {navigation.map((item, idx) => {
                   return (
                     <li
@@ -259,9 +270,11 @@ export default () => {
                       )}
                       {item.isDropdown &&
                       dropdownState.idx === idx &&
-                      dropdownState.isActive ? (
+                      dropdownState.isActive &&
+                      (item.title === "Platform" ||
+                        item.title === "Why ScaleSecure") ? (
                         <div
-                          className="mt-6 inset-x-0 top-20 w-full md:absolute md:border-y md:mt-0 bg-white  rounded-lg md:rounded-3xl z-20 p-2"
+                          className="mt-6 inset-x-0 top-20 w-full md:absolute md:border-y md:mt-0 bg-white rounded-lg md:rounded-3xl z-20 p-2"
                           onMouseLeave={() => {
                             if (!state) {
                               setdropdownState({
@@ -299,6 +312,34 @@ export default () => {
                                     </li>
                                   ))}
                                 </ul>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ) : item.isDropdown &&
+                        dropdownState.idx === idx &&
+                        dropdownState.isActive &&
+                        item.title === "Resources" ? (
+                        <div
+                          className="mt-6 inset-x-0 top-20 left-[33.3rem] w-fit md:absolute md:border-y md:mt-0 bg-white rounded-lg md:rounded-xl z-20 p-6 flex justify-center items-center"
+                          onMouseLeave={() => {
+                            if (!state) {
+                              setdropdownState({
+                                idx,
+                                isActive: false,
+                              });
+                            }
+                          }}
+                        >
+                          <ul className="flex flex-col items-center space-y-3 ">
+                            {item?.navs.map((dropdownItem, idx) => (
+                              <li key={idx}>
+                                <Link
+                                  to="/"
+                                  className="text-indigo-600 text-lg"
+                                >
+                                  {dropdownItem.label}
+                                </Link>
                               </li>
                             ))}
                           </ul>

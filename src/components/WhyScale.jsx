@@ -16,7 +16,9 @@ const WhyScale = () => {
         </p>
         <div className="flex items-center justify-center">
           <div
-            className="bg-white rounded-2xl w-[85%] flex flex-col item-center p-5 transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300 ;"
+            className={`bg-${
+              leftHovered ? "white" : "[#D8E7F0]"
+            } rounded-2xl w-[85%] flex flex-col item-center p-5 transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300 `}
             style={{
               transition: "box-shadow 0.3s ease-in-out",
               boxShadow: leftHovered
@@ -33,7 +35,7 @@ const WhyScale = () => {
               Manager who is your true partner in growth. With Scale Secure, you
               can rest assured your subscription business is in great hands.
             </p>
-            <button className="p-2 w-1/4 rounded-full tracking-widest bg-[#D5E3F8]  hover:text-black dark:text-neutral-200 flex hover:bg-[#E0F445] transition duration-200 space-x-2 m-5 hover:flex-row-reverse hover:duration-300">
+            <button className="p-2 w-1/4 rounded-full tracking-widest bg-[#b4c4dc]  hover:text-black dark:text-neutral-200 flex hover:bg-[#E0F445] transition duration-200 space-x-2 m-5 hover:flex-row-reverse hover:duration-300">
               <div className="rounded-full text-black bg-[#E0F445] transform transition-transform duration-300">
                 <ArrowForwardIcon />
               </div>
@@ -50,7 +52,9 @@ const WhyScale = () => {
       <div className="w-1/2 flex flex-col justify-center item-center  ">
         <div className="flex flex-col space-y-6 h-auto">
           <div
-            className="bg-white rounded-2xl p-3 w-[85%] transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300 ;"
+            className={`bg-${
+              rightTopHovered ? "white" : "[#D8E7F0]"
+            } rounded-2xl p-3 w-[85%] transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300 `}
             style={{
               transition: "box-shadow 0.3s ease-in-out",
               boxShadow: rightTopHovered
@@ -67,7 +71,7 @@ const WhyScale = () => {
               Manager who is your true partner in growth. With Scale Secure, you
               can rest assured your subscription business is in great hands.
             </p>
-            <button className="p-2 w-1/4 rounded-full tracking-widest bg-[#D5E3F8]  hover:text-black dark:text-neutral-200 flex hover:bg-[#E0F445] transition duration-200 space-x-2 m-5 hover:flex-row-reverse hover:duration-300">
+            <button className="p-2 w-1/4 rounded-full tracking-widest bg-[#b4c4dc]  hover:text-black dark:text-neutral-200 flex hover:bg-[#E0F445] transition duration-200 space-x-2 m-5 hover:flex-row-reverse hover:duration-300">
               <div className="rounded-full text-black bg-[#E0F445] transform transition-transform duration-300">
                 <ArrowForwardIcon />
               </div>
@@ -80,7 +84,9 @@ const WhyScale = () => {
             />
           </div>
           <div
-            className="bg-white rounded-2xl w-[85%] p-3 transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300 ;"
+            className={`bg-${
+              rightBottomHovered ? "white" : "[#D8E7F0]"
+            } rounded-2xl w-[85%] p-3 transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300 `}
             style={{
               transition: "box-shadow 0.3s ease-in-out",
               boxShadow: rightBottomHovered
@@ -97,7 +103,7 @@ const WhyScale = () => {
               Manager who is your true partner in growth. With Scale Secure, you
               can rest assured your subscription business is in great hands.
             </p>
-            <button className="p-2 w-1/4 rounded-full tracking-widest bg-[#D5E3F8]  hover:text-black dark:text-neutral-200 flex hover:bg-[#E0F445] transition duration-200 space-x-2 m-5 hover:flex-row-reverse hover:duration-300">
+            <button className="p-2 w-1/4 rounded-full tracking-widest bg-[#b4c4dc]  hover:text-black dark:text-neutral-200 flex hover:bg-[#E0F445] transition duration-200 space-x-2 m-5 hover:flex-row-reverse hover:duration-300">
               <div className="rounded-full text-black bg-[#E0F445] transform transition-transform duration-300">
                 <ArrowForwardIcon />
               </div>

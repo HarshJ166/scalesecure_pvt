@@ -32,7 +32,9 @@ const Bento = () => {
       <div className="h-7/12 w-[1000px] grid grid-cols-3 gap-5 py-8">
         {/* Box-1 */}
         <div
-          className="  row-span-1 bg-indigo-200 rounded-3xl transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300 "
+          className={`row-span-1 bg-${
+            gridOneHovered ? "white" : "indigo-200"
+          } rounded-3xl transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300`}
           style={{
             transition: "box-shadow 0.3s ease-in-out",
             boxShadow: gridOneHovered
@@ -57,7 +59,9 @@ const Bento = () => {
         </div>
         {/* Box-2 */}
         <div
-          className=" row-span-1 bg-indigo-200 rounded-3xl transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300 "
+          className={`row-span-1 bg-${
+            gridTwoHovered ? "white" : "indigo-200"
+          } rounded-3xl transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300`}
           style={{
             transition: "box-shadow 0.3s ease-in-out",
             boxShadow: gridTwoHovered
@@ -82,7 +86,9 @@ const Bento = () => {
         </div>
         {/* Box-3 */}
         <div
-          className=" row-span-2 bg-indigo-200 rounded-3xl transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300"
+          className={`row-span-2 bg-${
+            gridThreeHovered ? "white" : "indigo-200"
+          } rounded-3xl transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300`}
           style={{
             transition: "box-shadow 0.3s ease-in-out",
             boxShadow: gridThreeHovered
@@ -109,7 +115,9 @@ const Bento = () => {
         </div>
         {/* Box-4 */}
         <div
-          className=" row-span-2 bg-indigo-200 rounded-3xl transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300"
+          className={`row-span-2 bg-${
+            gridFourHovered ? "white" : "indigo-200"
+          } rounded-3xl transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300`}
           style={{
             transition: "box-shadow 0.3s ease-in-out",
             boxShadow: gridFourHovered
@@ -134,7 +142,9 @@ const Bento = () => {
         </div>
         {/* Box-5 */}
         <div
-          className=" row-span-1 bg-indigo-200 rounded-3xl transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300 "
+          className={`row-span-1 bg-${
+            gridFiveHovered ? "white" : "indigo-200"
+          } rounded-3xl transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300`}
           style={{
             transition: "box-shadow 0.3s ease-in-out",
             boxShadow: gridFiveHovered
@@ -159,7 +169,9 @@ const Bento = () => {
         </div>
         {/* Box-6 */}
         <div
-          className="row-span-1 col-span-2 bg-indigo-200 rounded-3xl transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300 "
+          className={`row-span-1 col-span-2 bg-${
+            gridSixHovered ? "white" : "indigo-200"
+          } rounded-3xl transform hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300`}
           style={{
             transition: "box-shadow 0.3s ease-in-out",
             boxShadow: gridSixHovered
