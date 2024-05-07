@@ -228,7 +228,7 @@ export default () => {
                   return (
                     <li
                       key={idx}
-                      className="md:pb-4"
+                      className="md:pb-4 font-body text-[#ABABAB] text-sm"
                       onMouseLeave={() => {
                         if (!state) {
                           setdropdownState({
@@ -274,7 +274,7 @@ export default () => {
                       (item.title === "Platform" ||
                         item.title === "Why ScaleSecure") ? (
                         <div
-                          className="mt-6 inset-x-0 top-20 w-full md:absolute md:border-y md:mt-0 bg-white rounded-lg md:rounded-3xl z-20 p-2"
+                          className="mt-6 inset-x-0 top-20 w-full md:w-[75%] left-[15rem] md:absolute md:border-y md:mt-0 bg-white rounded-lg md:rounded-3xl z-20 p-2"
                           onMouseLeave={() => {
                             if (!state) {
                               setdropdownState({
@@ -284,7 +284,52 @@ export default () => {
                             }
                           }}
                         >
-                          <ul className="max-w-screen-xl mx-auto grid items-center gap-6 md:p-8 md:grid-cols-2 lg:grid-cols-3">
+                          <div className="w-full flex md:flex-row md:space-x-2 space-y-3 flex-col text-[#03193D] p-5">
+                            {/* left section */}
+                            <div className="md:w-1/2 flex flex-col justify-center">
+                              <div className="md:mb-16">
+                                <div className="font-bold">The Platform</div>
+                                <hr className="w-[75%]"></hr>
+                              </div>
+                              <Link to="/">
+                                <div className="md:p-0 p-3">
+                                  <h2 className="font-bold">Subscription</h2>
+                                  <p>
+                                    Everything you need to sell subscriptions
+                                    tailored to your brand's needs.
+                                  </p>
+                                </div>
+                              </Link>
+                            </div>
+                            {/* right-section */}
+                            <div className="md:w-1/2">
+                              <div className="font-bold">Key Features</div>
+                              <div className="md:p-0 p-3">
+                                <div>
+                                  <h2 className="font-bold">ABC</h2>
+                                  <p>
+                                    Give your customer subscription on the
+                                    market
+                                  </p>
+                                </div>
+                                <div>
+                                  <h2 className="font-bold">LMN</h2>
+                                  <p>
+                                    Give your customer subscription on the
+                                    market
+                                  </p>
+                                </div>
+                                <div>
+                                  <h2 className="font-bold">XYZ</h2>
+                                  <p>
+                                    Give your customer subscription on the
+                                    market
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          {/* <ul className="max-w-screen-xl mx-auto grid items-center gap-6 md:p-8 md:grid-cols-2 lg:grid-cols-3">
                             {item?.navs.map((dropdownItem, idx) => (
                               <li key={idx}>
                                 <p className="text-indigo-600 text-sm">
@@ -314,7 +359,7 @@ export default () => {
                                 </ul>
                               </li>
                             ))}
-                          </ul>
+                          </ul> */}
                         </div>
                       ) : item.isDropdown &&
                         dropdownState.idx === idx &&
