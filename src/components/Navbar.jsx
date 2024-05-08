@@ -153,7 +153,7 @@ export default () => {
       isDropdown: true,
       navs: dropdownNavs,
     },
-    { title: "Pricing", path: "/Pricing", isDropdown: false },
+    { title: "Pricing", path: "/pricing", isDropdown: false },
     {
       title: "Resources",
       path: "/",
@@ -329,37 +329,6 @@ export default () => {
                               </div>
                             </div>
                           </div>
-                          {/* <ul className="max-w-screen-xl mx-auto grid items-center gap-6 md:p-8 md:grid-cols-2 lg:grid-cols-3">
-                            {item?.navs.map((dropdownItem, idx) => (
-                              <li key={idx}>
-                                <p className="text-indigo-600 text-sm">
-                                  {dropdownItem.label}
-                                </p>
-                                <ul className="mt-5 space-y-6">
-                                  {dropdownItem.navs.map((navItem, idx) => (
-                                    <li key={idx} className="group">
-                                      <Link
-                                        to={navItem.path}
-                                        className="flex gap-3 items-center"
-                                      >
-                                        <div className="w-12 h-12 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center duration-150 group-hover:bg-indigo-600 group-hover:text-white md:w-14 md:h-14">
-                                          {navItem.icon}
-                                        </div>
-                                        <div>
-                                          <span className="text-gray-800 duration-200 group-hover:text-indigo-600 text-sm font-medium md:text-base">
-                                            {navItem.title}
-                                          </span>
-                                          <p className="text-sm text-gray-600 group-hover:text-gray-800 mt-1">
-                                            {navItem.desc}
-                                          </p>
-                                        </div>
-                                      </Link>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </li>
-                            ))}
-                          </ul> */}
                         </div>
                       ) : item.isDropdown &&
                         dropdownState.idx === idx &&
@@ -399,7 +368,7 @@ export default () => {
               <div className="flex-1 items-center justify-end gap-x-6 space-y-3 md:flex md:space-y-0">
                 <li>
                   <Link
-                    to="/Login"
+                    to="/login"
                     className="block py-2 px-3 font-medium text-center text-black bg-[#c3d3dd] hover:bg-[#03193D] hover:text-white active:bg-[#03193D] active:shadow-none rounded-lg shadow md:inline"
                   >
                     Log in
@@ -407,7 +376,7 @@ export default () => {
                 </li>
                 <li>
                   <Link
-                    to="/Register"
+                    to="/register"
                     className="block py-3 px-4 font-medium text-center text-black bg-[#E0F445] hover:bg-[#03193D] hover:text-white active:bg-[#03193D] active:shadow-none rounded-lg shadow md:inline"
                   >
                     Get a Demo

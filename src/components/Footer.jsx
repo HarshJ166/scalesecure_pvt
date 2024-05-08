@@ -11,7 +11,7 @@ export default function Footer() {
           Ready to Get Scale Secure ?
         </h1>
         <div className=" flex items-center justify-center  px-2 py-4">
-          <Link to="/Register">
+          <Link to="/register">
             <button className="px-8 justify-center items-center box-border bg-[#E0F445] text-black text-sm rounded-md font-body hover:bg-[#E0F445]/[0.8] hover:shadow-lg p-2">
               Get a Demo
             </button>
