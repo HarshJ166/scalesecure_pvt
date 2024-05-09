@@ -171,7 +171,7 @@ export default () => {
   }, []);
 
   return (
-    <div className="font-para bg-[#D8E7F0] ">
+    <div className="font-para bg-[#D5E3F8] ">
       <nav
         className={`fixed left-0 top-0 z-40 w-full  md:static md:text-sm md:border-none bg-[#D8E7F0] ${
           state ? " rounded-b-xl" : ""
@@ -335,7 +335,7 @@ export default () => {
                         dropdownState.isActive &&
                         item.title === "Resources" ? (
                         <div
-                          className="mt-6 inset-x-0 top-20 left-[33.3rem] w-fit md:absolute md:border-y md:mt-0 bg-white rounded-lg md:rounded-xl z-20 p-6 flex justify-center items-center"
+                          className="mt-6 inset-x-0 top-20 left-[55rem] w-fit md:absolute md:border-y md:mt-0 bg-white rounded-lg md:rounded-xl z-20 p-6 flex justify-center items-center"
                           onMouseLeave={() => {
                             if (!state) {
                               setdropdownState({
@@ -348,10 +348,7 @@ export default () => {
                           <ul className="flex flex-col items-center space-y-3 ">
                             {item?.navs.map((dropdownItem, idx) => (
                               <li key={idx}>
-                                <Link
-                                  to="/"
-                                  className="text-indigo-600 text-lg"
-                                >
+                                <Link to="/" className="text-[#03193D] text-lg">
                                   {dropdownItem.label}
                                 </Link>
                               </li>
@@ -365,7 +362,7 @@ export default () => {
                   );
                 })}
               </div>
-              <div className="flex-1 items-center justify-end gap-x-6 space-y-3 md:flex md:space-y-0">
+              <div className="flex-1 items-center justify-end gap-x-6 space-y-3 md:flex md:space-y-0 font-body">
                 <li>
                   <Link
                     to="/login"
