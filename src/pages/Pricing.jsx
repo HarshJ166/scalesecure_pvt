@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Table from "../components/Table";
 import PricingSection from "../components/PricingSection";
 import Carousel from "../components/Carousel";
 import CarouselPhone from "../components/CarouselPhone";
