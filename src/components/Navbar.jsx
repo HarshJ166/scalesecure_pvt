@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/images/ScaleSecure Blue.png";
+import Logo from "../assets/images/Scale-secure-logo-black.png";
 
 const dropdownNavs = [
   {
@@ -173,14 +173,14 @@ export default () => {
   return (
     <div className="font-para bg-[#D5E3F8] ">
       <nav
-        className={`fixed left-0 top-0 z-40 w-full  md:static md:text-sm md:border-none bg-[#D8E7F0] ${
+        className={`fixed left-0 top-0 z-40 w-full  md:static md:text-sm md:border-none bg-[#D5E3F8] ${
           state ? " rounded-b-xl" : ""
         }`}
       >
         <div className="items-center gap-x-3 px-4 max-w-screen-xl mx-auto md:flex md:justify-center md:px-8">
           <div className="flex items-center justify-between py-3 md:pt-5 md:block">
             <Link to="/">
-              <img src={Logo} className="h-8" alt="Logo" />
+              <img src={Logo} className="h-24" alt="Logo" />
             </Link>
             <div className="md:hidden">
               <button
@@ -284,7 +284,7 @@ export default () => {
                             }
                           }}
                         >
-                          <div className="w-full flex md:flex-row md:space-x-2 space-y-3 flex-col text-[#03193D] p-5">
+                          <div className="w-full flex md:flex-row md:space-x-2 space-y-1 flex-col text-[#03193D] p-5">
                             {/* left section */}
                             <div className="md:w-1/2 flex flex-col justify-center">
                               <div className="md:mb-16">

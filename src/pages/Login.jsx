@@ -2,7 +2,8 @@ import React from "react";
 import { Label } from "../utils/Login/Label";
 import { Input } from "../utils/Login/Input";
 import cn from "../utils/cn";
-import logo from "../assets/images/ScaleSecurelogowhite.png";
+import Logo from "../assets/images/Scale-secure-logo-white.png";
+
 import { IconBrandGithub, IconBrandGoogle } from "@tabler/icons-react";
 
 const Login = () => {
@@ -15,7 +16,7 @@ const Login = () => {
     <div className="flex flex-col md:flex-row h-screen custom-font bg-[#D8E7F0]">
       {/* Left side - Scale Secure logo */}
       <div className="md:w-1/2 bg-[#03193D] flex items-center justify-center">
-        <img src={logo} alt="Scale Secure" className="w-96" />
+        <img src={Logo} alt="Scale Secure" className="w-96" />
       </div>
       {/* Right side - Login form */}
       <div className="md:w-1/2 bg-[#D8E7F0] font-primarybold flex items-center justify-center">

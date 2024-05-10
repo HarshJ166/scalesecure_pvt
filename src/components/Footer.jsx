@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/images/ScaleSecure Blue.png";
+import Logo from "../assets/images/Scale-secure-logo-black.png";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -28,7 +28,7 @@ export default function Footer() {
               <Link to="/" className="flex items-center">
                 <img
                   src={Logo}
-                  className="h-8 me-1 filter brightness-75 saturate-150"
+                  className="h-24 me-1 filter brightness-75 saturate-150"
                   alt="ScaleSecure Logo"
                 />
               </Link>
@@ -170,7 +170,7 @@ export default function Footer() {
         <div className="sm:flex sm:items-center sm:justify-center mt-5">
           <div className="sm:flex sm:items-center sm:justify-between sm:w-2/3 font-para">
             <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-              © 2023{" "}
+              © 2024{" "}
               <Link to="/" className="hover:underline">
                 ScaleSecure
               </Link>

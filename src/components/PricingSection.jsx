@@ -52,8 +52,8 @@ const PricingSection = () => {
   return (
     <div className="flex justify-center items-center custom-font">
       <section className="flex flex-col">
-        <div className="text-[#03193D] flex flex-col justify-self-center items-center w-7/12 space-y-4 mx-auto mb-10">
-          <h1 className="font-bold text-4xl">
+        <div className="text-[#03193D] flex flex-col justify-center items-center w-full mx-auto mb-10">
+          <h1 className="font-bold text-4xl text-center">
             The smartest way to invest in your repeat customers.
           </h1>
         </div>

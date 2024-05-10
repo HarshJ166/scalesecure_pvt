@@ -7,6 +7,8 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Link } from "react-router-dom";
 import Pricingcomparison from "../components/Pricecomparison";
 import { motion } from "framer-motion";
+import Carousel from "../components/Carousel";
+import CarouselPhone from "../components/CarouselPhone";
 export default function Pricing() {
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -48,13 +50,44 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="font-body w-full h-full bg-[#D5E3F8]">
+    <div className="font-body w-full h-full bg-[#D5E3F8] ">
+      {/* Navbar Section */}
       <div className="px-5 py-2.5">
         <Navbar />
       </div>
-      <div className="flex justify-center items-center">
+      {/* Navbar Section */}
+
+      {/* Pricing Section  */}
+      <div className="flex flex-col justify-center items-center">
         <PricingSection />
+        <div className="px-5 py-2">
+          <div className="bg-[#03193D] rounded-xl h-80 w-max-screen-xl mt-10 flex flex-col justify-center items-center  text-[#ABABAB] mb-5">
+            <h1 className=" text-white font-body text-3xl font-semibold mx-3">
+              Custom Pricing Model
+            </h1>
+            <div className="mx-3 mt-2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+              ad possimus commodi esse, debitis rem voluptatem nostrum harum ab
+              labore .
+            </div>
+            <div className=" flex items-center justify-center  px-2 py-4">
+              <Link to="/register">
+                <button className="px-8 justify-center items-center box-border bg-[#E0F445] text-black text-sm rounded-md font-body hover:bg-[#E0F445]/[0.8] hover:shadow-lg p-2">
+                  Get a Demo
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
+      {/* Pricing Section  */}
+
+      {/* Pricing Comparison Section */}
+      <div>
+        <Pricingcomparison />
+      </div>
+      {/* Pricing Comparison Section */}
+
       {/*  Counter Section */}
       <div className="flex flex-col md:items-center justify-center text-left space-y-9 py-5 m-5 custom-font">
         <p className="text-[#03193D]">We've processed over</p>
@@ -81,7 +114,7 @@ export default function Pricing() {
           }
         >
           <div className="w-full h-full flex justify-center items-center">
-            {/* <CarouselPhone /> */}
+            <CarouselPhone />
           </div>
         </div>
         {/* Desktop Element */}
@@ -93,11 +126,12 @@ export default function Pricing() {
           }
         >
           <div className="w-full h-full flex justify-center items-center">
-            {/* <Carousel /> */}
+            <Carousel />
           </div>
         </div>
       </div>
       {/* Carousel Section */}
+
       {/* FAQ Section */}
       <div className="flex justify-center items-center ">
         <div className="flex flex-col justify-center items-center px-5 py-2.5 custom-font">
@@ -152,31 +186,13 @@ export default function Pricing() {
           ))}
         </div>
       </div>
-      <div className="px-5 py-2.5">
-        <div className="bg-[#03193D] rounded-2xl h-80 flex flex-col justify-center items-center  text-[#ABABAB] mb-5">
-          <h1 className=" text-white font-body text-3xl font-semibold mx-3">
-            Custom Pricing Model
-          </h1>
-          <div className="mx-3 mt-2">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ad
-            possimus commodi esse, debitis rem voluptatem nostrum harum ab
-            labore .
-          </div>
-          <div className=" flex items-center justify-center  px-2 py-4">
-            <Link to="/register">
-              <button className="px-8 justify-center items-center box-border bg-[#E0F445] text-black text-sm rounded-md font-body hover:bg-[#E0F445]/[0.8] hover:shadow-lg p-2">
-                Get a Demo
-              </button>
-            </Link>
-          </div>
-        </div>
-      </div>
-      <div>
-        <Pricingcomparison />
-      </div>
+      {/* FAQ Section */}
+
+      {/* Footer Section  */}
       <div className="px-5 py-2.5">
         <Footer />
       </div>
+      {/* Footer Section  */}
     </div>
   );
 }

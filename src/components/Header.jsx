@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/images/ScaleSecurelogoblack.png";
+import Logo from "../assets/images/Scale-secure-logo-black.png";
 import { Link } from "react-router-dom";
 
 const dropdownNavs = [

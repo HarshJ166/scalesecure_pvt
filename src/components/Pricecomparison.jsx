@@ -3,7 +3,7 @@ import { useState } from "react";
 const Pricingcomparison = () => {
   const minusIcon = (
     <svg
-      className="w-5 h-5 mx-auto text-gray-500"
+      className="w-5 h-5 mx-auto text-[#03193D]"
       fill="[#03193D]"
       viewBox="0 0 20 20"
     >
@@ -253,11 +253,11 @@ const Pricingcomparison = () => {
                           </select>
                         </div>
                       </div>
-                      <div className="text-[#03193D] text-5xl font-semibold bg-[#D5E3F8] py-6 border-b">
+                      <div className="flex  flex-col text-[#03193D] text-5xl font-semibold bg-[#D5E3F8] py-6 border-b">
                         ${item.price}{" "}
-                        <span className="text-xl text-[#03193D] font-normal ">
-                          /mo
-                        </span>
+                        <h3 className=" flex justify-start items-start text-sm text-[#03193D] font-normal py-2.5 ">
+                          per month
+                        </h3>
                       </div>
 
                       <div>

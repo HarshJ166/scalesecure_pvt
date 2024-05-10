@@ -2,7 +2,8 @@ import React from "react";
 import { Label } from "../utils/Register/Label";
 import { Input } from "../utils/Register/Input";
 import cn from "../utils/cn";
-import Logo from "../assets/images/ScaleSecurelogoblack.png";
+import Logo from "../assets/images/Scale-secure-logo-black.png";
+
 import ContinuousScroll from "../components/ContinuousScroll";
 import StarIcon from "@mui/icons-material/Star";
 import { IconBrandGithub, IconBrandGoogle } from "@tabler/icons-react";
@@ -18,8 +19,8 @@ export default function Register() {
       {/* left-container */}
       <div className="relative w-full lg:w-1/2 h-full bg-[#03193D] text-white p-4 md:p-12 lg:p-12 flex flex-col justify-between">
         {/* Logo */}
-        <div className="mb-4 md:mb-10 lg:mb-10 filter invert">
-          <img src={Logo} alt="Logo" className="w-24 md:w-48" />
+        <div className="mb-4 md:mb-8 lg:mb-10 filter invert">
+          <img src={Logo} alt="Logo" className="w-24 md:w-72" />
         </div>
 
         {/* content */}
